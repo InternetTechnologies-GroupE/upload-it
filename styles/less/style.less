@@ -24,7 +24,7 @@ Author URI: http://undergraduate.csse.uwa.edu.au/units/CITS4230/
 @links: @lightBlue;
 @buttonsTop: #ccc;
 @buttonsBottom: #555;
-@footerBG: @nearBlack;
+@footerBG: #2a2a2a;
 
 
 /* DEFAULTS */
@@ -152,92 +152,95 @@ acronym, abbr, span.caps {
 /* HEADER */
 header {
 	padding: 10px 0;
-}
-header h1 {
-	display:inline-block;
-	color:@lightBlue;
-	font-size:4.5em;
-	line-height:130px;
-	text-indent:-1000px;
-	letter-spacing:-.2em;
-	text-transform:uppercase;
-	font-weight:normal;
-	vertical-align:middle;
-	width:260px;
-	height:100px;
-	margin:0;
+	clear:both;
 	
-	background-image:url(../../img/logo.gif);
-}
-header h1 em {
-	color:@lightGreen;
-	margin-left:.2em;
-	letter-spacing:0em;
-}
+	h1 {
+		display:inline-block;
+		color:@lightBlue;
+		font-size:4.5em;
+		line-height:130px;
+		text-indent:-1000px;
+		letter-spacing:-.2em;
+		text-transform:uppercase;
+		font-weight:normal;
+		vertical-align:middle;
+		width:260px;
+		height:100px;
+		margin:0;
 
-header h2 {
-	display:inline-block;
-	width:100%;
-	font-family:Comfortaa, Arial;
-	font-weight:normal;
-	color:@lightGreen;
-	margin:0;
-	letter-spacing:.4em;
-}
-
-nav {
-	position:relative;
-	font-size:1.2em;
-	margin-top:50px;
-	margin-bottom:15px;
-	text-align:right;
-	
-	a {
-		float:left;
-		padding:.1em .7em;
-	}
-	
-	a.active {
-		border-bottom:1px dotted @lightBlue;
-	}
-	
-	.navbox {
-		.box-shadow(1px, 1px, 3px, .5);
-		.rounded-corners(.5em);
-		border:2px solid #fff;
-		float:left;
-		padding:0;
-		overflow:hidden;
+		background-image:url(../../img/logo.gif);
 		
+		em {
+			color:@lightGreen;
+			margin-left:.2em;
+			letter-spacing:0em;
+		}
+	}
+	
+	h2 {
+		display:inline-block;
+		width:100%;
+		font-family:Comfortaa, Arial;
+		font-weight:normal;
+		color:@lightGreen;
+		margin:0;
+		letter-spacing:.4em;
+	}
+	
+	nav {
+		position:relative;
+		font-size:1.2em;
+		margin-top:50px;
+		margin-bottom:15px;
+		text-align:right;
+
 		a {
-			font-family:Comfortaa;
-			font:.8em;
-			font-weight:bold;
-			display:inline-block;
-			vertical-align:middle;
-			color:#fff;
+			float:left;
+			padding:.1em .7em;
 		}
-		
-		a.login {
-			.gradient(@lightGreen, @lightGreen, @darkGreen);
-			border-right:1px solid @darkGreen;
+
+		a.active {
+			border-bottom:1px dotted @lightBlue;
 		}
-		
-		a.signup {
-			.gradient(@lightBlue, @lightBlue, @darkBlue);
-			border-left:1px solid @lightBlue;
+
+		.navbox {
+			.box-shadow(1px, 1px, 3px, .5);
+			.rounded-corners(.5em);
+			border:2px solid #fff;
+			float:left;
+			padding:0;
+			overflow:hidden;
+
+			a {
+				font-family:Comfortaa;
+				font:.8em;
+				font-weight:bold;
+				display:inline-block;
+				vertical-align:middle;
+				color:#fff;
+			}
+
+			a.login {
+				.gradient(@lightGreen, @lightGreen, @darkGreen);
+				border-right:1px solid @darkGreen;
+			}
+
+			a.signup {
+				.gradient(@lightBlue, @lightBlue, @darkBlue);
+				border-left:1px solid @lightBlue;
+			}
 		}
-	}
-	
-	.connect {
-		font-family:"Gloria Hallelujah";
-		color:#aaa;
-		position:absolute;
-		top:-45px;
-		right:-150px;
-		padding-left:20px;
-		padding-bottom:20px;
-		background:url(../../img/conect-arrow.gif) 0 10px no-repeat;
+
+		.connect {
+			font-family:"Gloria Hallelujah";
+			color:#aaa;
+			position:absolute;
+			top:-45px;
+			right:-150px;
+			padding-left:20px;
+			padding-bottom:20px;
+			background:url(../../img/conect-arrow.gif) 0 10px no-repeat;
+		}
 	}
 }
 
@@ -274,18 +277,24 @@ nav {
 }
 
 /* CONTENT */
-
+#content {
+	
+}
 
 /* FOOTER */
 footer {
+	width:100%;
+	height: 279px;
+	margin-top:-280px;
+	padding:0;
+	
 	color:#eee;
 	background:@footerBG;
-	border-top:1px solid #000;
-	margin:0;
-	margin-top:15px;
-	padding:15px 0 0;
-	bottom: 0;
-	width:100%;
+	border-top:1px solid #fff;
+	
+	.inner {
+		margin-top:10px;
+	}
 	
 	h5 {
 		font-size:1.2em;
@@ -295,17 +304,12 @@ footer {
 	
 	.copy {
 		text-align:center;
-		margin-top:50px;
-		vertical-align:center;
-		
-		p {
-			margin:0;
-		}
 	}
-	
-	.disclaimer {
-		text-align:center;
-		padding:25px;
-		font-size:.8em;
-	}
+}
+
+#wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -280px; /* the bottom margin is the negative value of the footer's height */
 }
