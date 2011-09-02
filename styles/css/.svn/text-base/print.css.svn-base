@@ -1,0 +1,4 @@
+#head h1 {
+	text-indent:0;
+	background-image:none;
+}

@@ -1,0 +1,311 @@
+/*------------------------------------------------------------------
+
+[Description]
+
+Project:	UWA Internet Technologies
+Version:	1.0
+Author:		Group I
+Author URI: http://undergraduate.csse.uwa.edu.au/units/CITS4230/
+
+-------------------------------------------------------------------*/
+
+// [Color codes]
+@lightGreen: #8dc63f;
+@darkGreen: #709043;
+
+@lightBlue: #008ec4;
+@darkBlue: #1d5771;
+
+@lightGrey: #989897;
+@mediumGrey: #90908f;
+@darkGrey: #7b7b7a;
+@nearBlack: #1c1c1c;
+
+@links: @lightBlue;
+@buttonsTop: #ccc;
+@buttonsBottom: #555;
+@footerBG: @nearBlack;
+
+
+/* DEFAULTS */
+
+* {
+	outline:none;
+	margin:0;
+	padding:0;
+}
+html, body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	background:#e0e0e0 url(../../img/bg.jpg) 0 0 repeat-x;
+	font-size: 0.8em;
+}
+
+h2 {
+	font-size:1.5em;
+	text-transform:uppercase;
+	color:#333;
+}
+h3 {
+	color:#555;
+}
+h4 {
+	color:#777;
+}
+h6 { padding-left:15px;}
+
+p {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	letter-spacing:.04em;
+	line-height:1.5em;
+	text-align:justify;
+	
+	strong, em, b, i {
+		font-family: "Lucida Sans", "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+	}
+}
+
+a, a:link, a:hover, a:visited { color: @links; text-decoration:none; }
+
+.inline li {
+	width:auto;
+	display: inline;
+	list-style:none;
+}
+
+hr { border-top:1px dotted @lightGrey; }
+.l-vr { border-left:1px dotted @lightGrey; }
+.r-vr { border-left:1px dotted @lightGrey; }
+
+.whitespace, .spacer {
+	display:block;
+	height:25px;
+}
+
+.left {float:left;}
+.right {float:right;}
+.center { margin:0 auto; }
+.c-align { text-align:center; }
+.l-align { text-align:left; }
+.r-align { text-align:right; }
+.justify { text-align:justify; }
+
+.hidden, .jsshow {
+	display:none;
+}
+code {
+	font: 1.1em 'Courier New', Courier, Fixed;
+}
+acronym, abbr, span.caps {
+	font-size: 0.9em;
+	letter-spacing: .07em;
+}
+
+	/*colors*/
+.green { color:@darkGreen;}
+.green.light { color:@lightGreen;}
+.blue { color:@darkBlue;}
+.blue.light { color:@lightBlue;}
+.grey { color:@mediumGrey; }
+
+
+	/*mixins*/
+.rounded-corners-individual (@tl: 5px, @tr: 5px, @br: 5px, @bl: 5px) {
+	-moz-border-radius: @tl @tr @br @bl;
+	-webkit-border-radius: @tl @tr @br @bl;
+	-o-border-radius: @tl @tr @br @bl;
+	border-radius: @tl @tr @br @bl;
+}
+.rounded-corners (@radius: 5px) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-o-border-radius: @radius;
+	border-radius: @radius;
+}
+.box-shadow (@x: 1px, @y: 1px, @spread: 1px, @transparency: 0.2) {
+	-webkit-box-shadow: @x @y @spread rgba(0,0,0,@transparency);
+	-moz-box-shadow: @x @y @spread rgba(0,0,0,@transparency);
+	box-shadow: @x @y @spread rgba(0,0,0,@transparency);
+}
+.text-shadow (@x: 1px, @y: 1px, @spread: 1px, @color: #000) {
+	text-shadow: @x @y @spread @color;
+}
+.gradient (@top, @middle, @bottom) {
+	background: @middle;
+	background: -webkit-gradient(linear, left top, left bottom, from(@top), to(@bottom));
+	background: -moz-linear-gradient(top, @top, @bottom);
+	background: linear-gradient(top, @top, @bottom);
+}
+.inset() {
+	text-shadow: 0 -1px rgba(0,0,0,0.3), -1px 0 rgba(0,0,0,0.3), -1px -1px rgba(0,0,0,0.5), 0 1px rgba(255,255,255,0.2), 1px 0 rgba(255,255,255,0.2), 1px 1px rgba(255,255,255,0.4);
+}
+.vertical-gradient (@top: @lightGrey, @middle: @mediumGrey, @bottom: @darkGrey) {
+	background: @middle;
+	background: -webkit-gradient(linear, left top, left bottom, from(@top), to(@bottom));
+	background: -moz-linear-gradient(top,  @top,  @bottom);
+}
+
+/* HEADER */
+header {
+	padding: 10px 0;
+}
+header h1 {
+	display:inline-block;
+	color:@lightBlue;
+	font-size:4.5em;
+	line-height:130px;
+	text-indent:-1000px;
+	letter-spacing:-.2em;
+	text-transform:uppercase;
+	font-weight:normal;
+	vertical-align:middle;
+	width:260px;
+	height:100px;
+	margin:0;
+	
+	background-image:url(../../img/logo.gif);
+}
+header h1 em {
+	color:@lightGreen;
+	margin-left:.2em;
+	letter-spacing:0em;
+}
+
+header h2 {
+	display:inline-block;
+	width:100%;
+	font-family:Comfortaa, Arial;
+	font-weight:normal;
+	color:@lightGreen;
+	margin:0;
+	letter-spacing:.4em;
+}
+
+nav {
+	position:relative;
+	font-size:1.2em;
+	margin-top:50px;
+	margin-bottom:15px;
+	text-align:right;
+	
+	a {
+		float:left;
+		padding:.1em .7em;
+	}
+	
+	a.active {
+		border-bottom:1px dotted @lightBlue;
+	}
+	
+	.navbox {
+		.box-shadow(1px, 1px, 3px, .5);
+		.rounded-corners(.5em);
+		border:2px solid #fff;
+		float:left;
+		padding:0;
+		overflow:hidden;
+		
+		a {
+			font-family:Comfortaa;
+			font:.8em;
+			font-weight:bold;
+			display:inline-block;
+			vertical-align:middle;
+			color:#fff;
+		}
+		
+		a.login {
+			.gradient(@lightGreen, @lightGreen, @darkGreen);
+			border-right:1px solid @darkGreen;
+		}
+		
+		a.signup {
+			.gradient(@lightBlue, @lightBlue, @darkBlue);
+			border-left:1px solid @lightBlue;
+		}
+	}
+	
+	.connect {
+		font-family:"Gloria Hallelujah";
+		color:#aaa;
+		position:absolute;
+		top:-45px;
+		right:-150px;
+		padding-left:20px;
+		padding-bottom:20px;
+		background:url(../../img/conect-arrow.gif) 0 10px no-repeat;
+	}
+}
+
+#search {
+	padding-top:50px;
+	
+	input {
+		width:150px;
+		margin:0;
+		float:left;
+		height:18px;
+		border-right:none;
+		.rounded-corners-individual(3px, 0, 0, 3px);
+	}
+	
+	button {
+		float:left;
+		height:30px;
+
+		display:inline-block;
+		font-size:1em;
+		font-weight:bold;
+		text-align:center;
+		margin:0;
+		padding:0 5px;
+
+		color:#fff;
+
+		.vertical-gradient(#999, #999, #111);
+		.rounded-corners-individual(0, 3px, 3px, 0);
+
+		border:1px solid #999;
+	}
+}
+
+/* CONTENT */
+
+
+/* FOOTER */
+footer {
+	color:#eee;
+	background:@footerBG;
+	border-top:1px solid #000;
+	margin:0;
+	margin-top:15px;
+	padding:15px 0 0;
+	bottom: 0;
+	width:100%;
+	
+	h5 {
+		font-size:1.2em;
+		padding:10px 0;
+		margin:0;
+	}
+	
+	.copy {
+		text-align:center;
+		margin-top:50px;
+		vertical-align:center;
+		
+		p {
+			margin:0;
+		}
+	}
+	
+	.disclaimer {
+		text-align:center;
+		padding:25px;
+		font-size:.8em;
+	}
+}

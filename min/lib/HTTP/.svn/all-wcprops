@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/12/trunk/min/lib/HTTP
+END
+Encoder.php
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/12/trunk/min/lib/HTTP/Encoder.php
+END
+ConditionalGet.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/12/trunk/min/lib/HTTP/ConditionalGet.php
+END
