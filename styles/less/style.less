@@ -34,9 +34,6 @@ Author URI: http://undergraduate.csse.uwa.edu.au/units/CITS4230/
 	margin:0;
 	padding:0;
 }
-html, body {
-	height: 100%;
-}
 body {
 	margin: 0;
 	padding: 0;
@@ -44,18 +41,35 @@ body {
 	font-size: 0.8em;
 }
 
+h1, h2, h3, h4, h5 {
+	font-family: Comfortaa, Sans-serif;
+	letter-spacing:.15em;
+}
+h1 {
+	font-size:1.8em;
+	color:#1a1a1a;
+}
 h2 {
-	font-size:1.5em;
+	font-size:1.6em;
 	text-transform:uppercase;
-	color:#333;
+	color:#1f1f1f;
 }
 h3 {
-	color:#555;
+	font-size:1.4em
+	color:#2a2a2a;
 }
 h4 {
-	color:#777;
+	font-size:1.2em;
+	color:#2f2f2f;
 }
-h6 { padding-left:15px;}
+h5 {
+	font-size:1em;
+	color:#3a3a3a;
+}
+h6 {
+	font-size:.8em;
+	color:#3f3f3f;
+}
 
 p {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
@@ -83,6 +97,8 @@ hr { border-top:1px dotted @lightGrey; }
 
 .whitespace, .spacer {
 	display:block;
+	width:100%;
+	clear:both;
 	height:25px;
 }
 
@@ -100,9 +116,19 @@ hr { border-top:1px dotted @lightGrey; }
 code {
 	font: 1.1em 'Courier New', Courier, Fixed;
 }
-acronym, abbr, span.caps {
+acronym, abbr {
 	font-size: 0.9em;
 	letter-spacing: .07em;
+	font-style:italic;
+	text-decoration:underline;
+	letter-spacing:.2em;
+}
+q, blockquote {
+	font-style:italic;
+	color:#333;
+	margin-left:5px;
+	padding-left:5px;
+	border-left:1px dotted #333;
 }
 
 	/*colors*/
@@ -147,6 +173,28 @@ acronym, abbr, span.caps {
 	background: @middle;
 	background: -webkit-gradient(linear, left top, left bottom, from(@top), to(@bottom));
 	background: -moz-linear-gradient(top,  @top,  @bottom);
+}
+
+/* errors */
+ul.messages {
+	list-style:none;
+	color:#fff;
+	padding:0;
+	margin:0 0 10px;
+	
+	li {
+		font-size:1.1em;
+		font-weight:bold;
+		padding:5px;
+		margin:0;
+	}
+	
+	li.error {
+		.vertical-gradient(#880000, #880000, #550000);
+	}
+	li.warning {
+		.vertical-gradient(#bbbb00, #bbbb00, #555500);
+	}
 }
 
 /* HEADER */
@@ -251,7 +299,7 @@ header {
 		width:150px;
 		margin:0;
 		float:left;
-		height:18px;
+		height:28px;
 		border-right:none;
 		.rounded-corners-individual(3px, 0, 0, 3px);
 	}
@@ -276,17 +324,58 @@ header {
 	}
 }
 
+form {
+	input[type=text], input[type=password], textarea {
+		border:1px solid #999;
+		background:#fff url(../img/input-bg.jpg) 0 0 repeat-x;
+		padding:0 5px;
+		.rounded-corners(3px);
+	}
+}
+
+/* ASIDES */
+aside {
+	text-align:left;
+	
+	nav {
+		font-size:1.1em;
+		margin-bottom:15px;
+
+		a {
+			display:block;
+			padding:.1em .7em;
+		}
+
+		a.active {
+			border-bottom:1px dotted @lightBlue;
+		}
+	}
+}
+aside.fixed {
+	position: fixed;
+	top:0;
+}
+
 /* CONTENT */
 #content {
 	
 }
 
+div#slide_container {
+	.rounded-corners(5px);
+	.box-shadow(2px, 2px, 4px, .4);
+	
+	.slider {
+		height: 360px;
+		margin:5px;
+	}
+}
+
 /* FOOTER */
 footer {
 	width:100%;
-	height: 279px;
-	margin-top:-280px;
 	padding:0;
+	margin-top:25px;
 	
 	color:#eee;
 	background:@footerBG;
@@ -296,20 +385,11 @@ footer {
 		margin-top:10px;
 	}
 	
+	ul { list-style:none; }
+	
 	h5 {
-		font-size:1.2em;
-		padding:10px 0;
+		color:#fff;
+		text-align:center;
 		margin:0;
 	}
-	
-	.copy {
-		text-align:center;
-	}
-}
-
-#wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -280px; /* the bottom margin is the negative value of the footer's height */
 }

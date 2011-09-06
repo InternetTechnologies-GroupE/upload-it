@@ -1,4 +1,57 @@
-<h2>This is the HOME page</h2>
-<p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
+<script>
+$(document).ready(function() { 
+	$('#slide_container .slider').crossSlide({
+	  fade: 2
+	}, [
+		{
+			src: 'uploads/kb_01.jpg',
+			alt:  'Sand Castle',
+			from: 'top left 1.5x',
+			to:   'bottom right 1x',
+			time: 5
+		},
+		{
+			src: 'uploads/kb_02.jpg',
+			alt:  'Sand Castle',
+			from: 'top right 1x',
+			to:   'bottom left 1.5x',
+			time: 5
+		},
+		{
+			src: 'uploads/kb_03.jpg',
+			alt:  'Sand Castle',
+			from: 'top left 1.5x',
+			to:   'bottom right 1x',
+			time: 5
+		},
+		{
+			src: 'uploads/kb_04.jpg',
+			alt:  'Sand Castle',
+			from: 'top right 1x',
+			to:   'bottom left 1.5x',
+			time: 5
+		}
+	]);
+});
+</script>
+
+<div id="slide_container" class="grid_12">
+	<div class="slider">Loading images...</div>
+</div>
+
+<div class="spacer">&nbsp;</div>
+
+<div class="grid_8">
+	<h2>What is Upload[IT]?</h2>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+</div>
+<div class="grid_4">
+	<h2>Top Users</h2>
+	<ul>
+		<li>User 1</li>
+		<li>User 2</li>
+		<li>User 3</li>
+	</ul>
+</div>
