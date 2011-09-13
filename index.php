@@ -59,17 +59,19 @@ if (
 	(filemtime('index.php') < filemtime($cache_folder.$page))
 ) {
 	include($cache_folder.$page);
-	echo "<!-- Cached: ".date('H:i', filemtime($cache_folder.$page))." -->";
+	echo "<!-- Cached: ".date('d/m/Y H:i', filemtime($cache_folder.$page))." -->";
 	exit;
 }
 
 // No cached file found, regenerate
 ob_start();
-$template = file_get_contents('index.html');			// Load the template
-$base_uri = dirname($_SERVER['SCRIPT_NAME']).'/';		//Set the base_uri for relativity
-$content = file_get_contents($page_folder.$page);		// Get the page
+$template = file_get_contents('index.html');					// Load the template
+$base_uri = dirname($_SERVER['SCRIPT_NAME']).'/';				//Set the base_uri for relativity
+$last_edit = date('F dS Y @ h:i a', filemtime($page_folder.$page));	//Set the time this page was last edited
+$content = file_get_contents($page_folder.$page);				// Get the page
 $template = str_replace("{content}", $content, $template);
 $template = str_replace("{base_uri}", $base_uri, $template);
+$template = str_replace("{last_edit}", $last_edit, $template);
 
 echo $template;
 
