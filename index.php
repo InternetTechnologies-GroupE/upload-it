@@ -37,25 +37,25 @@ switch($browser->browser):
 endswitch;
 
 // Templating engine
-define('EXT', ".html");
 define('PATH_INFO', $_SERVER["PATH_INFO"]);
 $page_folder = "content";
 $cache_folder = "content/cache";
+$template = "styles/template.html";
 
 if($_SERVER["PATH_INFO"])
 {
-	$page = file_exists($page_folder.PATH_INFO.EXT) ? PATH_INFO.EXT : '/errors/404'.EXT;
+	$page = file_exists($page_folder.PATH_INFO) ? PATH_INFO : '/errors/404.html';
 }
 else
 {
-	$page = '/home'.EXT;
+	$page = '/index.html';
 }
 // Cacheing engine
 if (
 	ENVIRONMENT=='live' &&
 	file_exists($cache_folder.$page) &&
 	(filemtime($page_folder.$page) < filemtime($cache_folder.$page)) &&
-	(filemtime('index.html') < filemtime($cache_folder.$page)) &&
+	(filemtime($template) < filemtime($cache_folder.$page)) &&
 	(filemtime('index.php') < filemtime($cache_folder.$page))
 ) {
 	include($cache_folder.$page);
@@ -65,17 +65,29 @@ if (
 
 // No cached file found, regenerate
 ob_start();
-$template = file_get_contents('index.html');					// Load the template
-$base_uri = dirname($_SERVER['SCRIPT_NAME']).'/';				//Set the base_uri for relativity
-$last_edit = date('F dS Y @ h:i a', filemtime($page_folder.$page));	//Set the time this page was last edited
-$content = file_get_contents($page_folder.$page);				// Get the page
-$template = str_replace("{content}", $content, $template);
-$template = str_replace("{base_uri}", $base_uri, $template);
-$template = str_replace("{last_edit}", $last_edit, $template);
 
-echo $template;
+// Load the template
+$html = file_get_contents($template);
 
-$cache = fopen($cache_folder.$page, 'w');				// Open the cached file
-fwrite($cache, ob_get_contents());						// Write generated html into the cached file
-fclose($fp);											// Close the file
-ob_end_flush();											// Send the output to the browser
+// Put in the page
+$html = str_replace("{content}", file_get_contents($page_folder.$page), $html);
+
+//Set the base_uri for relativity
+$html = str_replace("{base_uri}",  "" /*dirname($_SERVER['SCRIPT_NAME']).'/'*/, $html);
+
+//Set the time this page was last edited
+$html = str_replace("{last_edit}", date('F dS Y @ h:i a', filemtime($page_folder.$page)), $html);
+
+// Send the output to the browser
+echo $html;
+
+// Open the cached file
+$cache = fopen($cache_folder.$page, 'w');
+
+// Write generated html into the cached file
+fwrite($cache, ob_get_contents());
+
+// Close the file
+fclose($fp);
+
+ob_end_flush();	

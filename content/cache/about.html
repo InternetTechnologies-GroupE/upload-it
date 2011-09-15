@@ -8,19 +8,21 @@
 		
 		<title>Upload[IT] - A simple photo upload site</title>
 		
-		<link rel="shortcut icon" href="favicon.png" />
+		<link rel="shortcut icon" href="img/favicon.png" />
 		
 		<!-- Google Web Fonts: www.google.com/webfonts -->
 		<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700|Gloria+Hallelujah' rel='stylesheet' type='text/css' />
 		
 		<!-- CSS Minify: code.google.com/p/minify/ -->
-		<link type="text/css" rel="stylesheet" href="/upload-it/min/g=css&amp;0.1" media="all" />
-		<link type="text/css" rel="stylesheet" href="/upload-it/min/f=upload-it/styles/css/print.css" media="print" />
+		<link type="text/css" rel="stylesheet" href="min/g=css&amp;0.2" media="all" />
+		<link type="text/css" rel="stylesheet" href="min/f=upload-it/styles/css/print.css" media="print" />
 	
 		<!-- jQuery: www.jquery.com -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-		<script type="text/javascript" src="/upload-it/js/jquery.cross-slide.js"></script>
-		<script type="text/javascript" src="/upload-it/js/upload-it.js"></script>
+		<!-- <script type="text/javascript" src="min/g=js&amp;0.1"></script> -->
+		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="js/jquery.cross-slide.js"></script>
+		<script type="text/javascript" src="js/upload-it.js"></script>
 		
 	</head>
 
@@ -31,32 +33,39 @@
 		<div id="wrapper">
 			<div id="main">
 				<header class="container_12">
-					<a href="home" class="grid_4">
+					<a href="index.html" class="grid_4">
 						<h1>Upload<em>[IT]</em></h1>
 						<h2>Photo Sharing</h2>
 					</a>
 			
 					<nav class="grid_5">
 						<span class="connect">Connect now and start sharing photos!</span>
-						<a href="/upload-it/home">Home</a>
-						<a href="/upload-it/about">About</a>
-						<a href="/upload-it/browse">Browse</a>
+						<a href="index.html">Home</a>
+						<a href="about.html">About</a>
+						<a href="browse.html">Browse</a>
 						<span class="navbox">
-							<a href="/upload-it/login" class="login">Login</a>
-							<a href="/upload-it/register" class="signup">Sign Up</a>
+							<a href="login.html" class="login">Login</a>
+							<a href="register.html" class="signup">Sign Up</a>
 						</span>
 					</nav>
 			
 					<form action="search" id="search" class="grid_3">
-						<fieldset>
-							<input type="text" class="search" placeholder="Search for images" />
-							<button type="submit"><img src="img/search.png" alt="GO" /></button>
-						</fieldset>
+						<input name="search" type="search" class="search" placeholder="Search for images" />
+						<button type="submit"><img src="img/search.png" alt="GO" /></button>
 					</form>
 				</header>
 		
 				<article id="content" class="container_12">
-					<h2>This is the ABOUT page</h2>
+					<h2>About Upload[IT]</h2>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
 <p>
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
@@ -71,17 +80,18 @@
 					<p>
 						Legal Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
+					<p><em><strong>Last Edited:</strong> September 15th 2011 @ 12:22 pm</em></p>
 				</div>
 				<div class="grid_4">
 					<h5>Quick Links</h5>
 					<ul>
-						<li><a href="/upload-it/home">Home</a></li>
-						<li><a href="/upload-it/about">About</a></li>
-						<li><a href="/upload-it/browse">Browse</a></li>
-						<li><a href="/upload-it/help">Help</a></li>
-						<li><a href="/upload-it/references">References</a></li>
-						<li><a href="/upload-it/login">Login</a></li>
-						<li><a href="/upload-it/register">Sign Up</a></li>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="browse.html">Browse</a></li>
+						<li><a href="help.html">Help</a></li>
+						<li><a href="references.html">References</a></li>
+						<li><a href="login.html">Login</a></li>
+						<li><a href="register.html">Sign Up</a></li>
 					</ul>
 				</div>
 			</div>

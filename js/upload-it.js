@@ -11,4 +11,6 @@ $(document).ready(function() {
 			}
 		}
 	}
+	
+	$(".gallery a[rel^='prettyPhoto']").prettyPhoto();
 });

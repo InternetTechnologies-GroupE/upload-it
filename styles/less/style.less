@@ -167,7 +167,7 @@ q, blockquote {
 	background: linear-gradient(top, @top, @bottom);
 }
 .inset() {
-	text-shadow: 0 -1px rgba(0,0,0,0.3), -1px 0 rgba(0,0,0,0.3), -1px -1px rgba(0,0,0,0.5), 0 1px rgba(255,255,255,0.2), 1px 0 rgba(255,255,255,0.2), 1px 1px rgba(255,255,255,0.4);
+	text-shadow: 0 -1px rgba(0,0,0,0.3), -1px 0 rgba(0,0,0,0.3), -1px -1px rgba(0,0,0,0.5), 0 1px rgba(255,255,255,0.1), 1px 0 rgba(255,255,255,0.1), 1px 1px rgba(255,255,255,0.2);
 }
 .vertical-gradient (@top: @lightGrey, @middle: @mediumGrey, @bottom: @darkGrey) {
 	background: @middle;
@@ -253,8 +253,8 @@ header {
 
 		.navbox {
 			.box-shadow(1px, 1px, 3px, .5);
-			.rounded-corners(.5em);
-			border:2px solid #fff;
+			.rounded-corners(.3em);
+			border:1px solid #fff;
 			float:left;
 			padding:0;
 			overflow:hidden;
@@ -325,11 +325,82 @@ header {
 }
 
 form {
-	input[type=text], input[type=password], textarea {
+	fieldset {
+		text-align:center;
+		margin:50px 100px;
+
+		border:3px solid #fff;
+		.vertical-gradient(#666, #333, #111);
+		.rounded-corners(5px);
+		.box-shadow(2px, 2px, 4px, .4);
+		
+		legend {
+			position:absolute;
+			font-size:3.5em;
+			letter-spacing:.1em;
+			text-transform:uppercase;
+			margin-left:25px;
+			color:#555;
+			.inset();
+		}
+		
+		ol {
+			padding:55px 25px 0;
+			li {
+				margin: 10px 0;
+				label {
+					font-size:1.2em;
+					color:#fff;
+					margin-left:-200px;
+				}
+			}
+			
+			li.controls {
+				margin-top:35px;
+				text-align:right;
+			}
+		}
+	}
+	
+	input, textarea {
+		font-size:1.1em;
 		border:1px solid #999;
 		background:#fff url(../img/input-bg.jpg) 0 0 repeat-x;
 		padding:0 5px;
 		.rounded-corners(3px);
+	}
+	
+	ol {
+		list-style:none;
+		
+		li {
+			margin:5px 0;
+			
+			label {
+				font-size:1.1em;
+				display:inline-block;
+				width:200px;
+				text-align:right;
+				margin-right:5px;
+			}
+			
+			input, textarea {
+				padding:3px;
+			}
+		}
+	}
+	
+	button {
+		font-size:1.5em;
+		display:inline-block;
+		vertical-align:middle;
+		color:#fff;
+		padding:3px 6px;
+		margin:0 10px;
+		.gradient(@lightGreen, @lightGreen, @darkGreen);
+		.box-shadow(1px, 1px, 3px, .5);
+		.rounded-corners(.2em);
+		border:1px solid #fff;
 	}
 }
 
@@ -361,13 +432,49 @@ aside.fixed {
 	
 }
 
+.users {
+	ul {
+		list-style:none;
+		li {
+			margin: 10px 0;
+			padding:2px;
+			background: #fff;
+			.rounded-corners(3px);
+			.box-shadow(1px, 1px, 2px, .4);
+			img {
+				margin-right:10px;
+			}
+		}
+	}
+}
+
+ul.gallery {
+	li {
+		list-style:none;
+		background:#fff;
+		margin-top:20px;
+		.box-shadow(2px, 2px, 4px, .4);
+		.rounded-corners(5px);
+		height:140px;
+		text-align:center;
+		
+		a {
+			font-size:1.5em;
+			display:block;
+			padding:10px;
+			vertical-align:middle;
+			line-height:110px;
+		}
+	}
+}
+
 div#slide_container {
 	.rounded-corners(5px);
 	.box-shadow(2px, 2px, 4px, .4);
 	
 	.slider {
 		height: 360px;
-		margin:5px;
+		margin:10px;
 	}
 }
 
