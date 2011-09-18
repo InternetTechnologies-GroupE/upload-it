@@ -39,8 +39,8 @@ endswitch;
 // Templating engine
 define('PATH_INFO', $_SERVER["PATH_INFO"]);
 $page_folder = "content";
-$cache_folder = "content/cache";
-$template = "styles/template.html";
+$cache_folder = "cache";
+$template = "template.html";
 
 if($_SERVER["PATH_INFO"])
 {

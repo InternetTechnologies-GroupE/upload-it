@@ -10,7 +10,7 @@
  **/
 
 return array(
-	'css' => array('../styles/css/960/960.css', '../styles/css/960/reset.css', '../styles/css/960/text.css', '../styles/css/prettyPhoto.css', '../styles/css/style.css'),
+	'css' => array('../css/960/960.css', '../css/960/reset.css', '../css/960/text.css', '../css/prettyPhoto.css', '../css/style.css'),
 	'js' => array('../js/jquery.prettyPhoto.js', '../js/jquery.cross-slide.js', '../js/upload-it.js')
     // 'js' => array('//js/file1.js', '//js/file2.js'),
     // 'css' => array('//css/file1.css', '//css/file2.css'),

@@ -12,5 +12,9 @@ $(document).ready(function() {
 		}
 	}
 	
-	$(".gallery a[rel^='prettyPhoto']").prettyPhoto();
+	$('a[data-rel]').each(function() {
+	    $(this).attr('rel', $(this).data('rel'));
+	});
+	
+	$(".gallery a.prettyPhoto").prettyPhoto();
 });
