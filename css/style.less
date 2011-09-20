@@ -164,15 +164,11 @@ q, blockquote {
 	background: @middle;
 	background: -webkit-gradient(linear, left top, left bottom, from(@top), to(@bottom));
 	background: -moz-linear-gradient(top, @top, @bottom);
+	background: -o-linear-gradient(top, @top, @bottom);
 	background: linear-gradient(top, @top, @bottom);
 }
 .inset() {
 	text-shadow: 0 -1px rgba(0,0,0,0.3), -1px 0 rgba(0,0,0,0.3), -1px -1px rgba(0,0,0,0.5), 0 1px rgba(255,255,255,0.1), 1px 0 rgba(255,255,255,0.1), 1px 1px rgba(255,255,255,0.2);
-}
-.vertical-gradient (@top: @lightGrey, @middle: @mediumGrey, @bottom: @darkGrey) {
-	background: @middle;
-	background: -webkit-gradient(linear, left top, left bottom, from(@top), to(@bottom));
-	background: -moz-linear-gradient(top,  @top,  @bottom);
 }
 
 /* message */
@@ -218,10 +214,10 @@ ul.messages {
 	}
 	
 	li.error {
-		.vertical-gradient(#880000, #880000, #550000);
+		.gradient(#880000, #880000, #550000);
 	}
 	li.warning {
-		.vertical-gradient(#bbbb00, #bbbb00, #555500);
+		.gradient(#bbbb00, #bbbb00, #555500);
 	}
 }
 
@@ -309,7 +305,7 @@ header {
 
 				color:#fff;
 
-				.vertical-gradient(#999, #999, #111);
+				.gradient(#777, #444, #111);
 				.rounded-corners-individual(0, 3px, 3px, 0);
 
 				border:1px solid #999;
@@ -326,19 +322,20 @@ header {
 
 			a {
 				font-family:Comfortaa;
-				font:.8em;
 				font-weight:bold;
 				display:inline-block;
 				vertical-align:middle;
 				color:#fff;
 			}
-
+			
 			a.login {
+				.rounded-corners-individual(.1em, 0, 0, .1em);
 				.gradient(@lightGreen, @lightGreen, @darkGreen);
 				border-right:1px solid @darkGreen;
 			}
 
 			a.signup {
+				.rounded-corners-individual(0, .1em, .1em, 0);
 				.gradient(@lightBlue, @lightBlue, @darkBlue);
 				border-left:1px solid @lightBlue;
 			}
@@ -389,7 +386,7 @@ aside.fixed {
 			margin:50px 100px;
 
 			border:3px solid #fff;
-			.vertical-gradient(#666, #333, #111);
+			.gradient(#666, #333, #111);
 			.rounded-corners(5px);
 			.box-shadow(2px, 2px, 4px, .4);
 
@@ -461,6 +458,12 @@ aside.fixed {
 			.rounded-corners(.2em);
 			border:1px solid #fff;
 		}
+	}
+}
+
+form.login, form.sign-up {
+	input {
+		width:200px;
 	}
 }
 

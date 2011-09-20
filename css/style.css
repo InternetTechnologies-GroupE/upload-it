@@ -194,11 +194,15 @@ ul.messages li.error {
   background: #880000;
   background: -webkit-gradient(linear, left top, left bottom, from(#880000), to(#550000));
   background: -moz-linear-gradient(top, #880000, #550000);
+  background: -o-linear-gradient(top, #880000, #550000);
+  background: linear-gradient(top, #880000, #550000);
 }
 ul.messages li.warning {
   background: #bbbb00;
   background: -webkit-gradient(linear, left top, left bottom, from(#bbbb00), to(#555500));
   background: -moz-linear-gradient(top, #bbbb00, #555500);
+  background: -o-linear-gradient(top, #bbbb00, #555500);
+  background: linear-gradient(top, #bbbb00, #555500);
 }
 /* HEADER */
 header {
@@ -277,9 +281,11 @@ header nav form button {
   margin: 0;
   padding: 0 5px;
   color: #fff;
-  background: #999999;
-  background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#111111));
-  background: -moz-linear-gradient(top, #999999, #111111);
+  background: #444444;
+  background: -webkit-gradient(linear, left top, left bottom, from(#777777), to(#111111));
+  background: -moz-linear-gradient(top, #777777, #111111);
+  background: -o-linear-gradient(top, #777777, #111111);
+  background: linear-gradient(top, #777777, #111111);
   -moz-border-radius: 0 3px 3px 0;
   -webkit-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
@@ -301,23 +307,32 @@ header nav .navbox {
 }
 header nav .navbox a {
   font-family: Comfortaa;
-  font: .8em;
   font-weight: bold;
   display: inline-block;
   vertical-align: middle;
   color: #fff;
 }
 header nav .navbox a.login {
+  -moz-border-radius: 0.1em 0 0 0.1em;
+  -webkit-border-radius: 0.1em 0 0 0.1em;
+  -o-border-radius: 0.1em 0 0 0.1em;
+  border-radius: 0.1em 0 0 0.1em;
   background: #8dc63f;
   background: -webkit-gradient(linear, left top, left bottom, from(#8dc63f), to(#709043));
   background: -moz-linear-gradient(top, #8dc63f, #709043);
+  background: -o-linear-gradient(top, #8dc63f, #709043);
   background: linear-gradient(top, #8dc63f, #709043);
   border-right: 1px solid #709043;
 }
 header nav .navbox a.signup {
+  -moz-border-radius: 0 0.1em 0.1em 0;
+  -webkit-border-radius: 0 0.1em 0.1em 0;
+  -o-border-radius: 0 0.1em 0.1em 0;
+  border-radius: 0 0.1em 0.1em 0;
   background: #008ec4;
   background: -webkit-gradient(linear, left top, left bottom, from(#008ec4), to(#1d5771));
   background: -moz-linear-gradient(top, #008ec4, #1d5771);
+  background: -o-linear-gradient(top, #008ec4, #1d5771);
   background: linear-gradient(top, #008ec4, #1d5771);
   border-left: 1px solid #008ec4;
 }
@@ -359,6 +374,8 @@ aside.fixed {
   background: #333333;
   background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#111111));
   background: -moz-linear-gradient(top, #666666, #111111);
+  background: -o-linear-gradient(top, #666666, #111111);
+  background: linear-gradient(top, #666666, #111111);
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -o-border-radius: 5px;
@@ -427,6 +444,7 @@ aside.fixed {
   background: #8dc63f;
   background: -webkit-gradient(linear, left top, left bottom, from(#8dc63f), to(#709043));
   background: -moz-linear-gradient(top, #8dc63f, #709043);
+  background: -o-linear-gradient(top, #8dc63f, #709043);
   background: linear-gradient(top, #8dc63f, #709043);
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -436,6 +454,9 @@ aside.fixed {
   -o-border-radius: 0.2em;
   border-radius: 0.2em;
   border: 1px solid #fff;
+}
+form.login input, form.sign-up input {
+  width: 200px;
 }
 .users ul {
   list-style: none;
