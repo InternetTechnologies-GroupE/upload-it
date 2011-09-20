@@ -175,6 +175,34 @@ q, blockquote {
 	background: -moz-linear-gradient(top,  @top,  @bottom);
 }
 
+/* message */
+div.message {
+	font-size:1.2em;
+	border-width:1px;
+	border-style:solid;
+	padding:25px 25px 25px 70px;
+	margin:15px 0;
+	
+	background:#ccc);
+	color:#333;
+}
+div.message.success {
+	background: #E7FFD6 url('../img/msg/success.png') 25px 50% no-repeat;
+	color:#8CD76B;
+}
+div.message.info {
+	background: #E7F3FF url('../img/msg/info.png') 25px 50% no-repeat;
+	color:#7BA6D6;
+}
+div.message.error {
+	background: #FFE7E7 url('../img/msg/error.png') 25px 50% no-repeat;
+	color:#E77D7B;
+}
+div.message.warning {
+	background: #fff6bf url('../img/msg/warning.png') 25px 50% no-repeat;
+	color:#ffd324;
+}
+
 /* errors */
 ul.messages {
 	list-style:none;
@@ -237,18 +265,55 @@ header {
 	
 	nav {
 		position:relative;
-		font-size:1.2em;
 		margin-top:50px;
 		margin-bottom:15px;
 		text-align:right;
 
 		a {
+			font-size:1.2em;
 			float:left;
 			padding:.1em .7em;
 		}
 
 		a.active {
 			border-bottom:1px dotted @lightBlue;
+		}
+		
+		form {
+			float:left;
+			margin:0 25px;
+
+			input {
+				font-size:1.1em;
+				float:left;
+				width:150px;
+				margin:0;
+				height:28px;
+				border:1px solid #999;
+				border-right:none;
+				.rounded-corners-individual(3px, 0, 0, 3px);
+				background:#fff url(../img/input-bg.jpg) 0 0 repeat-x;
+				padding:0 5px;
+			}
+
+			button {
+				float:left;
+				height:30px;
+
+				display:inline-block;
+				font-size:1em;
+				font-weight:bold;
+				text-align:center;
+				margin:0;
+				padding:0 5px;
+
+				color:#fff;
+
+				.vertical-gradient(#999, #999, #111);
+				.rounded-corners-individual(0, 3px, 3px, 0);
+
+				border:1px solid #999;
+			}
 		}
 
 		.navbox {
@@ -281,126 +346,15 @@ header {
 
 		.connect {
 			font-family:"Gloria Hallelujah";
+			font-size:1.3em;
 			color:#aaa;
 			position:absolute;
 			top:-45px;
-			right:-150px;
-			padding-left:20px;
+			right:100px;
+			padding-right:20px;
 			padding-bottom:20px;
-			background:url(../img/conect-arrow.gif) 0 10px no-repeat;
+			background:url(../img/conect-arrow.gif) 100% 10px no-repeat;
 		}
-	}
-}
-
-#search {
-	padding-top:50px;
-	
-	input {
-		width:150px;
-		margin:0;
-		float:left;
-		height:28px;
-		border-right:none;
-		.rounded-corners-individual(3px, 0, 0, 3px);
-	}
-	
-	button {
-		float:left;
-		height:30px;
-
-		display:inline-block;
-		font-size:1em;
-		font-weight:bold;
-		text-align:center;
-		margin:0;
-		padding:0 5px;
-
-		color:#fff;
-
-		.vertical-gradient(#999, #999, #111);
-		.rounded-corners-individual(0, 3px, 3px, 0);
-
-		border:1px solid #999;
-	}
-}
-
-form {
-	fieldset {
-		text-align:center;
-		margin:50px 100px;
-
-		border:3px solid #fff;
-		.vertical-gradient(#666, #333, #111);
-		.rounded-corners(5px);
-		.box-shadow(2px, 2px, 4px, .4);
-		
-		legend {
-			position:absolute;
-			font-size:3.5em;
-			letter-spacing:.1em;
-			text-transform:uppercase;
-			margin-left:25px;
-			color:#555;
-			.inset();
-		}
-		
-		ol {
-			padding:55px 25px 0;
-			li {
-				margin: 10px 0;
-				label {
-					font-size:1.2em;
-					color:#fff;
-					margin-left:-200px;
-				}
-			}
-			
-			li.controls {
-				margin-top:35px;
-				text-align:right;
-			}
-		}
-	}
-	
-	input, textarea {
-		font-size:1.1em;
-		border:1px solid #999;
-		background:#fff url(../img/input-bg.jpg) 0 0 repeat-x;
-		padding:0 5px;
-		.rounded-corners(3px);
-	}
-	
-	ol {
-		list-style:none;
-		
-		li {
-			margin:5px 0;
-			
-			label {
-				font-size:1.1em;
-				display:inline-block;
-				width:200px;
-				text-align:right;
-				margin-right:5px;
-			}
-			
-			input, textarea {
-				padding:3px;
-			}
-		}
-	}
-	
-	button {
-		font-size:1.5em;
-		display:inline-block;
-		vertical-align:middle;
-		color:#fff;
-		padding:3px 6px;
-		margin:0 10px;
-		.gradient(@lightGreen, @lightGreen, @darkGreen);
-		.box-shadow(1px, 1px, 3px, .5);
-		.rounded-corners(.2em);
-		border:1px solid #fff;
 	}
 }
 
@@ -429,7 +383,85 @@ aside.fixed {
 
 /* CONTENT */
 #content {
-	
+	form {
+		fieldset {
+			text-align:center;
+			margin:50px 100px;
+
+			border:3px solid #fff;
+			.vertical-gradient(#666, #333, #111);
+			.rounded-corners(5px);
+			.box-shadow(2px, 2px, 4px, .4);
+
+			legend {
+				position:absolute;
+				font-size:3.5em;
+				letter-spacing:.1em;
+				text-transform:uppercase;
+				margin-left:25px;
+				color:#555;
+				.inset();
+			}
+
+			ol {
+				padding:55px 25px 0;
+				li {
+					margin: 10px 0;
+					label {
+						font-size:1.2em;
+						color:#fff;
+						margin-left:-200px;
+					}
+				}
+
+				li.controls {
+					margin-top:35px;
+					text-align:right;
+				}
+			}
+		}
+
+		input, textarea {
+			font-size:1.1em;
+			border:1px solid #999;
+			background:#fff url(../img/input-bg.jpg) 0 0 repeat-x;
+			padding:0 5px;
+			.rounded-corners(3px);
+		}
+
+		ol {
+			list-style:none;
+
+			li {
+				margin:5px 0;
+
+				label {
+					font-size:1.1em;
+					display:inline-block;
+					width:200px;
+					text-align:right;
+					margin-right:5px;
+				}
+
+				input, textarea {
+					padding:3px;
+				}
+			}
+		}
+
+		button {
+			font-size:1.5em;
+			display:inline-block;
+			vertical-align:middle;
+			color:#fff;
+			padding:3px 6px;
+			margin:0 10px;
+			.gradient(@lightGreen, @lightGreen, @darkGreen);
+			.box-shadow(1px, 1px, 3px, .5);
+			.rounded-corners(.2em);
+			border:1px solid #fff;
+		}
+	}
 }
 
 .users {
@@ -442,7 +474,11 @@ aside.fixed {
 			.rounded-corners(3px);
 			.box-shadow(1px, 1px, 2px, .4);
 			img {
+				display:inline-block;
 				margin-right:10px;
+				width:50px;
+				height:50px;
+				background:#ccc;
 			}
 		}
 	}
@@ -471,6 +507,7 @@ ul.gallery {
 div#slide_container {
 	.rounded-corners(5px);
 	.box-shadow(2px, 2px, 4px, .4);
+	background:#111;
 	
 	.slider {
 		height: 360px;
@@ -496,7 +533,6 @@ footer {
 	
 	h5 {
 		color:#fff;
-		text-align:center;
 		margin:0;
 	}
 }

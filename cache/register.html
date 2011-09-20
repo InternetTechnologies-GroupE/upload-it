@@ -14,7 +14,7 @@
 		
 		<!-- CSS Minify: code.google.com/p/minify/ -->
 		<link type="text/css" rel="stylesheet" href="min/g=css&amp;0.2" media="all" />
-		<link type="text/css" rel="stylesheet" href="min/f=upload-it/styles/css/print.css" media="print" />
+		<link type="text/css" rel="stylesheet" href="min/f=upload-it/css/print.css" media="print" />
 	
 		<!-- jQuery: www.jquery.com -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
@@ -34,21 +34,22 @@
 						<h2>Photo Sharing</h2>
 					</a>
 			
-					<nav class="grid_5">
+					<nav class="grid_8">
 						<span class="connect">Connect now and start sharing photos!</span>
 						<a href="index.html">Home</a>
 						<a href="about.html">About</a>
 						<a href="browse.html">Browse</a>
+						
+						<form action="search.html" id="search">
+							<input name="search" type="search" class="search" placeholder="Search for images" />
+							<button type="submit"><img src="img/search.png" alt="GO" /></button>
+						</form>
+						
 						<span class="navbox">
 							<a href="login.html" class="login">Login</a>
 							<a href="register.html" class="signup">Sign Up</a>
 						</span>
 					</nav>
-			
-					<form action="search.html" id="search" class="grid_3">
-						<input name="search" type="search" class="search" placeholder="Search for images" />
-						<button type="submit"><img src="img/search.png" alt="GO" /></button>
-					</form>
 				</header>
 		
 				<article id="content" class="container_12">
@@ -72,12 +73,9 @@
 		
 		<footer>
 			<div class="container_12 inner">
-				<div class="grid_8">
-					<h5 class="center">© 2011</h5>
-					<p>
-						Legal Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					</p>
-					<p><em><strong>Last Edited:</strong> September 16th 2011 @ 01:23 pm</em></p>
+				<div class="grid_8 c-align">
+					<h5>© 2011 Upload[IT]</h5>
+					<em><strong>Last Edited:</strong> September 16th 2011 @ 01:23 pm</em>
 				</div>
 				<div class="grid_4">
 					<h5>Quick Links</h5>
