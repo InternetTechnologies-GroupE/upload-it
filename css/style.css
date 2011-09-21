@@ -306,8 +306,7 @@ header nav .navbox {
   overflow: hidden;
 }
 header nav .navbox a {
-  font-family: Comfortaa;
-  font-weight: bold;
+  letter-spacing: .05em;
   display: inline-block;
   vertical-align: middle;
   color: #fff;
@@ -337,7 +336,7 @@ header nav .navbox a.signup {
   border-left: 1px solid #008ec4;
 }
 header nav .connect {
-  font-family: "Gloria Hallelujah";
+  font-family: "Gloria Hallelujah", "Comic Sans MS", "Brush Script MT", cursive;
   font-size: 1.3em;
   color: #aaa;
   position: absolute;
