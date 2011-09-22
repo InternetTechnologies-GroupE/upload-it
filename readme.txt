@@ -11,3 +11,4 @@ Wael Saeed  - 20471262@student.uwa.edu.au
 Notes:
 References located at /references.html
 The base version uses a php templating system. If apache is not installed we have prepared a final "static version" located at /static/index.html
+Site validates as HTML5, the only validation errors as XHTML1.1 are HTML5 elements and properties. CSS does not validate due to backwards compatibility for CSS3 declarations.
