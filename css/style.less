@@ -291,6 +291,9 @@ ul.messages {
 				background:#fff url(../img/input-bg.jpg) 0 0 repeat-x;
 				padding:0 5px;
 			}
+			input.faded {
+				color:#999;
+			}
 
 			button {
 				float:left;
@@ -367,6 +370,7 @@ ul.messages {
 
 		a {
 			display:block;
+			width:100%;
 			padding:.1em .7em;
 		}
 
@@ -383,16 +387,16 @@ ul.messages {
 /* CONTENT */
 #content {
 	form {
+		border:3px solid #fff;
+		background:#333;
+		.gradient(#666, #333, #111);
+		.rounded-corners(5px);
+		.box-shadow(2px, 2px, 4px, .4);
+		margin:50px 100px;
+		
 		fieldset {
 			text-align:center;
-			margin:50px 100px;
-
-			border:3px solid #fff;
-			background:#666;
-			.gradient(#666, #333, #111);
-			.rounded-corners(5px);
-			.box-shadow(2px, 2px, 4px, .4);
-
+			
 			legend {
 				position:absolute;
 				font-size:3.5em;
@@ -427,6 +431,9 @@ ul.messages {
 			background:#fff url(../img/input-bg.jpg) 0 0 repeat-x;
 			padding:0 5px;
 			.rounded-corners(3px);
+		}
+		input.faded {
+			color:#999;
 		}
 
 		ol {

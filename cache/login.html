@@ -12,48 +12,48 @@
 		<!-- Google Web Fonts: www.google.com/webfonts -->
 		<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700|Gloria+Hallelujah' rel='stylesheet' type='text/css' />
 		
-		<!-- CSS Minify: code.google.com/p/minify/ -->
-		<link type="text/css" rel="stylesheet" href="min/g=css&amp;0.2" media="all" />
-		<link type="text/css" rel="stylesheet" href="min/f=upload-it/css/print.css" media="print" />
+		<link type="text/css" rel="stylesheet" href="css/960/960.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/960/reset.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/960/text.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/prettyPhoto.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
+		<link type="text/css" rel="stylesheet" href="css/print.css" media="print" />
 	
-		<!-- jQuery: www.jquery.com -->
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-		<script type="text/javascript" src="min/g=js&amp;0.1"></script>
-		
+		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+		<script type="text/javascript" src="js/upload-it.js"></script>
 	</head>
 
 	<!--[if IE 7 ]>    <body class="ie ie7" lang="en"> <![endif]-->
 	<!--[if IE 8 ]>    <body class="ie ie8" lang="en"> <![endif]-->
 	<!--[if IE 9 ]>    <body class="ie ie9" lang="en"> <![endif]--> 
 	<!--[if (gte IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
-		<div id="wrapper">
-			<div id="main">
-				<header class="container_12">
-					<a href="index.html" class="grid_4">
-						<h1>Upload<em>[IT]</em></h1>
-						<h2>Photo Sharing</h2>
-					</a>
-			
-					<nav class="grid_8">
-						<span class="connect">Connect now and start sharing photos!</span>
-						<a href="index.html">Home</a>
-						<a href="about.html">About</a>
-						<a href="browse.html">Browse</a>
-						
-						<form action="search.html" id="search">
-							<input name="search" type="search" class="search" placeholder="Search for images" />
-							<button type="submit"><img src="img/search.png" alt="GO" /></button>
-						</form>
-						
-						<span class="navbox">
-							<a href="login.html" class="login">Login</a>
-							<a href="sign-up.html" class="signup">Sign Up</a>
-						</span>
-					</nav>
-				</header>
-		
-				<article id="content" class="container_12">
-					<form class="login">
+		<div id="header" class="container_12">
+			<a href="index.html" class="grid_4">
+				<h1>Upload<em>[IT]</em></h1>
+				<h2>Photo Sharing</h2>
+			</a>
+	
+			<div id="nav" class="grid_8">
+				<span class="connect">Connect now and start sharing photos!</span>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="browse.html">Browse</a>
+				
+				<form action="search.html" id="search">
+					<input name="search" type="search" class="search" placeholder="Search for images" />
+					<button type="submit"></button>
+				</form>
+				
+				<span class="navbox">
+					<a href="login.html" class="login">Login</a>
+					<a href="sign-up.html" class="signup">Sign Up</a>
+				</span>
+			</div>
+		</div>
+
+		<div id="content" class="container_12">
+			<form class="login">
 	<fieldset>
 		<legend>Login</legend>
 		<ol>
@@ -63,11 +63,9 @@
 		</ol>
 	</fieldset>
 </form>
-				</article>
-			</div>
 		</div>
 		
-		<footer>
+		<div id="footer">
 			<div class="container_12 inner">
 				<div class="grid_8 c-align">
 					<h5>© 2011 Upload[IT]</h5>
@@ -86,7 +84,7 @@
 					</ul>
 				</div>
 			</div>
-		</footer>
+		</div>
     </body>
 	
 </html>

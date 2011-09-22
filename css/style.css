@@ -270,6 +270,9 @@ ul.messages li.warning {
   background: #ffffff url(../img/input-bg.jpg) 0 0 repeat-x;
   padding: 0 5px;
 }
+#header #nav form input.faded {
+  color: #999;
+}
 #header #nav form button {
   float: left;
   height: 30px;
@@ -352,6 +355,7 @@ ul.messages li.warning {
 }
 .aside .nav a {
   display: block;
+  width: 100%;
   padding: .1em .7em;
 }
 .aside .nav a.active {
@@ -362,11 +366,9 @@ ul.messages li.warning {
   top: 0;
 }
 /* CONTENT */
-#content form fieldset {
-  text-align: center;
-  margin: 50px 100px;
+#content form {
   border: 3px solid #fff;
-  background: #666;
+  background: #333;
   background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#111111));
   background: -moz-linear-gradient(top, #666666, #111111);
   background: -o-linear-gradient(top, #666666, #111111);
@@ -378,6 +380,10 @@ ul.messages li.warning {
   -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 50px 100px;
+}
+#content form fieldset {
+  text-align: center;
 }
 #content form fieldset legend {
   position: absolute;
@@ -412,6 +418,9 @@ ul.messages li.warning {
   -webkit-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+}
+#content form input.faded {
+  color: #999;
 }
 #content form ol {
   list-style: none;
