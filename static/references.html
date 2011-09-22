@@ -11,8 +11,8 @@
 		
 		<!-- Google Web Fonts: www.google.com/webfonts -->
 		<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700|Gloria+Hallelujah' rel='stylesheet' type='text/css' />
-		
-		<link type="text/css" rel="stylesheet" href="css/960/960.min.css" media="all" />
+
+		<link type="text/css" rel="stylesheet" href="css/960.min.css" media="all" />
 		<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
 		<link type="text/css" rel="stylesheet" href="css/prettyPhoto.css" media="all" />
 		<link type="text/css" rel="stylesheet" href="css/print.css" media="print" />
@@ -21,6 +21,7 @@
 		<script type="text/javascript" src="js/jquery.cross-slide.js"></script>
 		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
 		<script type="text/javascript" src="js/upload-it.js"></script>
+		
 	</head>
 
 	<!--[if IE 7 ]>    <body class="ie ie7" lang="en"> <![endif]-->
@@ -82,46 +83,23 @@
 	
 	<h3 id="css">2 CSS</h3>
 	
-	<h4>2.1 Less CSS</h4>
-	<p>To further speed development we are implementing Less CSS, Less is an extension of CSS that allows dynamic content such as variables, mixins, operations and functions. This allows us to keep the CSS extremely modular, eg. changing a standard colour used across the CSS file requires only changing the colour variable. Originally designed to be used with a Javascript library allowing browsers to implement Less we have decided to compile Less as seperate CSS files allowing for maximum compatibility. The Less CSS files can be found under <code>"<a href="styles/less">/styles/less</a>"</code> and the compiled css under <code>"<a href="styles/css">/styles/css</a>"</code>.</p>
-	<p><a href="http://lesscss.org/">Visit the Less CSS website</a></p>
-	
-	<h4>2.2 960 Grid System</h4>
+	<h4>2.1 960 Grid System</h4>
 	<p>We use a 12 column 960 pixel wide grid provided by 960 Grid System. Each column is 60 pixels wide with a 20 pixel gutter between. Using a grid speeds layout development and reduces the need for defining widths inside the main CSS, it potentially also means we could switch grid dimensions in the future or serve a mobile version based on a smaller resolution. 960 Grid System also provides a CSS reset (resetting default styling across browsers) and a basic typography CSS both of which we implement.</p>
 	<p><a href="http://960.gs/">Visit the 960 Grid System website</a></p>
 	
-	<h4>2.3 Google Web Fonts</h4>
+	<h4>2.2 Google Web Fonts</h4>
 	<p>Traditionally very few fonts are installed by default on all platforms meaning web designers have to stick to these particular fonts to ensure a web page will be consistent across all browsers and systems. Google Web Fonts introduces cross-platform open source fonts, allowing fonts to be dynamically loaded and set through CSS without having to worry whether a visitor has that font installed on their system.</p>
 	<p><a href="http://www.google.com/webfonts">Visit the Google Web Fonts website</a></p>
-	
-	
-	<h3 id="php">3 PHP</h3>
-	
-	<h4>3.1 Minify</h4>
-	<p>We are dedicated to delivering content in the fastest and most efficient manner. Minify is an open source php project that allows for fast combining, compressing, serving and cacheing of CSS and Javascript. This reduces not only the payload of HTTP requests but the number of actual HTTP requests by combining multiple files into one. Furthermore Minify allows for shorter URLs by predefining groups.</p>
-	<p><a href="http://code.google.com/p/minify/">Visit the Minify website</a></p>
-	
-	<h4>3.2 PHP Basic Templating</h4>
-	<p>We have developed our own basic PHP templating system that allows content to be stored separately from the HTML template. It is basically a stripped down "MVC" framework to simply a "V" framework. Here is a quick run-through of its process:
-		<ol>
-			<li>The htaccess file serves any HTTP_REQUEST that is not specifically an existing file or folder to index.php</li>
-			<li>The index.php checks the server name, if operating on a localhost (or local.* etc.) it sets the environment to development, otherwise we assume the environment is live.</li>
-			<li>Looking at the path info (the uri) index.php then checks to see if there is a corresponding .html file in the /content folder, if not we serve a 404, additionally it serves the home.html file if path info is blank.</li>
-			<li>If the environment is set to "live" index.php checks first if there is a cached version, if so it will check if the cached timestamp is newer than the actual content html file as well as the index.html (our template) file and index.php (itself), if all is good it will serve the cached HTML and exit.</li>
-			<li>Otherwise index.php loads the index.html file (the template), it separately loads the content html based on the path info, it then combines the HTML and saves the generated output into the cache.</li>
-		</ol>
-	</p>
 	
 </div>
 
 <div class="aside grid_3 sticky">
 	<h5>Contents</h5>
-	<nav>
+	<div class="nav">
 		<a href="#javascript">Javascript</a>
 		<a href="#css">CSS</a>
-		<a href="#php">PHP</a>
 		<a href="#top" class="return">Return to top</a>
-	</nav>
+	</div>
 </div>
 		</div>
 		
@@ -130,7 +108,7 @@
 				<div class="grid_8 c-align">
 					<h5>© 2011 Upload[IT]</h5>
 					<p class="c-align"><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fcits4230e.csse.uwa.edu.au%2F" title="HTML5 Powered with CSS3 / Styling and Semantics"><img src="img/html5-css3.png" alt="HTML5 Powered with CSS3 / Styling and Semantics" /></a></p>
-					<em><strong>Last Edited:</strong> September 22nd 2011 @ 01:30 pm</em>
+					<em><strong>Last Edited:</strong> September 22nd 2011 @ 02:39 pm</em>
 				</div>
 				<div class="grid_4">
 					<h5>Quick Links</h5>

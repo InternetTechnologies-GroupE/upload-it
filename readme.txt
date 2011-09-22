@@ -20,12 +20,7 @@ NOTES:
 			- Cross Slide jQuery plugin for image transition effect.
 			- prettyPhoto jQuery plugin for image overlay effect.
 		- CSS
-			- Less CSS for speed CSS writing.
 			- 960 Grid System for layout grid.
 			- Google Web Fonts for improved typography.
-		- PHP
-			- Minify a php based resource minifier (for css and javascript)
-			- PHP Basic Templating system (written by us, however a static version of html documents has been created too, see below)
-			The base version uses a php templating system. If apache is not installed we have prepared a final "static version" located at /static/index.html
 
 	- Site validates as HTML5, the only validation errors as XHTML1.1 are HTML5 elements and properties. CSS does not validate due to backwards compatibility for CSS3 declarations.
