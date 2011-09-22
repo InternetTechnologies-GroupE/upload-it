@@ -18,45 +18,38 @@
 		<link type="text/css" rel="stylesheet" href="css/prettyPhoto.css" media="all" />
 		<link type="text/css" rel="stylesheet" href="css/style.css" media="all" />
 		<link type="text/css" rel="stylesheet" href="css/print.css" media="print" />
-	
-		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-		<script type="text/javascript" src="js/upload-it.js"></script>
-		
 	</head>
 
 	<!--[if IE 7 ]>    <body class="ie ie7" lang="en"> <![endif]-->
 	<!--[if IE 8 ]>    <body class="ie ie8" lang="en"> <![endif]-->
 	<!--[if IE 9 ]>    <body class="ie ie9" lang="en"> <![endif]--> 
 	<!--[if (gte IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
-		<div id="wrapper">
-			<div id="main">
-				<header class="container_12">
-					<a href="index.html" class="grid_4">
-						<h1>Upload<em>[IT]</em></h1>
-						<h2>Photo Sharing</h2>
-					</a>
-			
-					<nav class="grid_8">
-						<span class="connect">Connect now and start sharing photos!</span>
-						<a href="index.html">Home</a>
-						<a href="about.html">About</a>
-						<a href="browse.html">Browse</a>
-						
-						<form action="search.html" id="search">
-							<input name="search" type="search" class="search" placeholder="Search for images" />
-							<button type="submit"><img src="img/search.png" alt="GO" /></button>
-						</form>
-						
-						<span class="navbox">
-							<a href="login.html" class="login">Login</a>
-							<a href="sign-up.html" class="signup">Sign Up</a>
-						</span>
-					</nav>
-				</header>
-		
-				<article id="content" class="container_12">
-					<script type="text/javascript" src="js/jquery.cross-slide.js"></script>
+		<div id="header" class="container_12">
+			<a href="index.html" class="grid_4">
+				<h1>Upload<em>[IT]</em></h1>
+				<h2>Photo Sharing</h2>
+			</a>
+	
+			<div id="nav" class="grid_8">
+				<span class="connect">Connect now and start sharing photos!</span>
+				<a href="index.html">Home</a>
+				<a href="about.html">About</a>
+				<a href="browse.html">Browse</a>
+				
+				<form action="search.html" id="search">
+					<input name="search" type="search" class="search" placeholder="Search for images" />
+					<button type="submit"></button>
+				</form>
+				
+				<span class="navbox">
+					<a href="login.html" class="login">Login</a>
+					<a href="sign-up.html" class="signup">Sign Up</a>
+				</span>
+			</div>
+		</div>
+
+		<div id="content" class="container_12">
+			<script type="text/javascript" src="js/jquery.cross-slide.js"></script>
 <script type="text/javascript">
 $(document).ready(function() { 
 	$('#slide_container .slider').crossSlide({
@@ -111,7 +104,7 @@ $(document).ready(function() {
 		<h2>Top Users</h2>
 		<ul>
 				<li><img src="uploads/profiles/ben_thumb.jpg" title="Ben Currie" /> Ben Currie</li>
-				<li><img src="uploads/profiles/james_thumb.jpg" title="James Ausden" /> James Ausden</li>
+				<li><img src="uploads/profiles/unknown_thumb.jpg" title="James Ausden" /> James Ausden</li>
 				<li><img src="uploads/profiles/waleed_thumb.jpg" title="Waleed Saeed" /> Waleed Saeed</li>
 				<li><img src="uploads/profiles/wael_thumb.jpg" title="Wael Saeed" /> Wael Saeed</li>
 		</ul>
@@ -127,15 +120,13 @@ $(document).ready(function() {
 		<li class="grid_2"><a href="browse.html">More...</a></li>
 </ul>
 
-				</article>
-			</div>
 		</div>
 		
-		<footer>
+		<div id="footer">
 			<div class="container_12 inner">
 				<div class="grid_8 c-align">
 					<h5>© 2011 Upload[IT]</h5>
-					<em><strong>Last Edited:</strong> September 21st 2011 @ 10:59 am</em>
+					<em><strong>Last Edited:</strong> September 22nd 2011 @ 01:15 pm</em>
 				</div>
 				<div class="grid_4">
 					<h5>Quick Links</h5>
@@ -150,7 +141,7 @@ $(document).ready(function() {
 					</ul>
 				</div>
 			</div>
-		</footer>
+		</div>
     </body>
 	
 </html>

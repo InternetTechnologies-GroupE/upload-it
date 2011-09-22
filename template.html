@@ -22,46 +22,41 @@
 		<script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
 		<script type="text/javascript" src="{base_uri}js/jquery.prettyPhoto.js"></script>
 		<script type="text/javascript" src="{base_uri}js/upload-it.js"></script>
-		
 	</head>
 
 	<!--[if IE 7 ]>    <body class="ie ie7" lang="en"> <![endif]-->
 	<!--[if IE 8 ]>    <body class="ie ie8" lang="en"> <![endif]-->
 	<!--[if IE 9 ]>    <body class="ie ie9" lang="en"> <![endif]--> 
 	<!--[if (gte IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
-		<div id="wrapper">
-			<div id="main">
-				<header class="container_12">
-					<a href="{base_uri}index.html" class="grid_4">
-						<h1>Upload<em>[IT]</em></h1>
-						<h2>Photo Sharing</h2>
-					</a>
-			
-					<nav class="grid_8">
-						<span class="connect">Connect now and start sharing photos!</span>
-						<a href="{base_uri}index.html">Home</a>
-						<a href="{base_uri}about.html">About</a>
-						<a href="{base_uri}browse.html">Browse</a>
-						
-						<form action="search.html" id="search">
-							<input name="search" type="search" class="search" placeholder="Search for images" />
-							<button type="submit"><img src="img/search.png" alt="GO" /></button>
-						</form>
-						
-						<span class="navbox">
-							<a href="{base_uri}login.html" class="login">Login</a>
-							<a href="{base_uri}sign-up.html" class="signup">Sign Up</a>
-						</span>
-					</nav>
-				</header>
-		
-				<article id="content" class="container_12">
-					{content}
-				</article>
+		<div id="header" class="container_12">
+			<a href="{base_uri}index.html" class="grid_4">
+				<h1>Upload<em>[IT]</em></h1>
+				<h2>Photo Sharing</h2>
+			</a>
+	
+			<div id="nav" class="grid_8">
+				<span class="connect">Connect now and start sharing photos!</span>
+				<a href="{base_uri}index.html">Home</a>
+				<a href="{base_uri}about.html">About</a>
+				<a href="{base_uri}browse.html">Browse</a>
+				
+				<form action="search.html" id="search">
+					<input name="search" type="search" class="search" placeholder="Search for images" />
+					<button type="submit"></button>
+				</form>
+				
+				<span class="navbox">
+					<a href="{base_uri}login.html" class="login">Login</a>
+					<a href="{base_uri}sign-up.html" class="signup">Sign Up</a>
+				</span>
 			</div>
 		</div>
+
+		<div id="content" class="container_12">
+			{content}
+		</div>
 		
-		<footer>
+		<div id="footer">
 			<div class="container_12 inner">
 				<div class="grid_8 c-align">
 					<h5>© 2011 Upload[IT]</h5>
@@ -80,7 +75,7 @@
 					</ul>
 				</div>
 			</div>
-		</footer>
+		</div>
     </body>
 	
 </html>

@@ -38,7 +38,6 @@ body {
 	margin: 0;
 	padding: 0;
 	background:#e0e0e0 url(../img/bg.jpg) 0 0 repeat-x;
-	font-size: 0.8em;
 }
 
 h1, h2, h3, h4, h5 {
@@ -161,7 +160,6 @@ q, blockquote {
 	text-shadow: @x @y @spread @color;
 }
 .gradient (@top, @middle, @bottom) {
-	background: @middle;
 	background: -webkit-gradient(linear, left top, left bottom, from(@top), to(@bottom));
 	background: -moz-linear-gradient(top, @top, @bottom);
 	background: -o-linear-gradient(top, @top, @bottom);
@@ -214,15 +212,17 @@ ul.messages {
 	}
 	
 	li.error {
+		background:#880000;
 		.gradient(#880000, #880000, #550000);
 	}
 	li.warning {
+		background:#bbbb00;
 		.gradient(#bbbb00, #bbbb00, #555500);
 	}
 }
 
 /* HEADER */
-header {
+#header {
 	padding: 25px 0;
 	clear:both;
 	
@@ -230,7 +230,6 @@ header {
 		display:inline-block;
 		color:@lightBlue;
 		font-size:4.5em;
-		line-height:130px;
 		text-indent:-1000px;
 		letter-spacing:-.2em;
 		text-transform:uppercase;
@@ -240,7 +239,7 @@ header {
 		height:100px;
 		margin:0;
 
-		background-image:url(../img/logo.gif);
+		background:url(../img/logo.gif) 0 0 no-repeat;
 		
 		em {
 			color:@lightGreen;
@@ -256,10 +255,10 @@ header {
 		font-weight:normal;
 		color:@lightGreen;
 		margin:0;
-		letter-spacing:.4em;
+		letter-spacing:.35em;
 	}
 	
-	nav {
+	#nav {
 		position:relative;
 		margin-top:50px;
 		margin-bottom:15px;
@@ -268,7 +267,7 @@ header {
 		a {
 			font-size:1.2em;
 			float:left;
-			padding:.1em .7em;
+			padding:4px 8px;
 		}
 
 		a.active {
@@ -277,10 +276,11 @@ header {
 		
 		form {
 			float:left;
-			margin:0 25px;
+			margin:0 15px;
 
 			input {
 				font-size:1.1em;
+				line-height:2;
 				float:left;
 				width:150px;
 				margin:0;
@@ -295,6 +295,7 @@ header {
 			button {
 				float:left;
 				height:30px;
+				width:40px;
 
 				display:inline-block;
 				font-size:1em;
@@ -305,7 +306,7 @@ header {
 
 				color:#fff;
 
-				.gradient(#777, #444, #111);
+				background:#333 url(../img/search.jpg) 50% 50% no-repeat;
 				.rounded-corners-individual(0, 3px, 3px, 0);
 
 				border:1px solid #999;
@@ -328,14 +329,16 @@ header {
 			}
 			
 			a.login {
-				.rounded-corners-individual(.1em, 0, 0, .1em);
+				background:@lightGreen url(../img/bg-green-gradient.jpg) 0 50% repeat-x;
 				.gradient(@lightGreen, @lightGreen, @darkGreen);
+				.rounded-corners-individual(.1em, 0, 0, .1em);
 				border-right:1px solid @darkGreen;
 			}
 
 			a.signup {
-				.rounded-corners-individual(0, .1em, .1em, 0);
+				background:@lightBlue url(../img/bg-blue-gradient.jpg) 0 50% repeat-x;
 				.gradient(@lightBlue, @lightBlue, @darkBlue);
+				.rounded-corners-individual(0, .1em, .1em, 0);
 				border-left:1px solid @lightBlue;
 			}
 		}
@@ -355,10 +358,10 @@ header {
 }
 
 /* ASIDES */
-aside {
+.aside {
 	text-align:left;
 	
-	nav {
+	.nav {
 		font-size:1.1em;
 		margin-bottom:15px;
 
@@ -372,7 +375,7 @@ aside {
 		}
 	}
 }
-aside.fixed {
+.aside.fixed {
 	position: fixed;
 	top:0;
 }
@@ -385,6 +388,7 @@ aside.fixed {
 			margin:50px 100px;
 
 			border:3px solid #fff;
+			background:#666;
 			.gradient(#666, #333, #111);
 			.rounded-corners(5px);
 			.box-shadow(2px, 2px, 4px, .4);
@@ -452,6 +456,7 @@ aside.fixed {
 			color:#fff;
 			padding:3px 6px;
 			margin:0 10px;
+			background:@lightGreen;
 			.gradient(@lightGreen, @lightGreen, @darkGreen);
 			.box-shadow(1px, 1px, 3px, .5);
 			.rounded-corners(.2em);
@@ -470,6 +475,7 @@ form.login, form.sign-up {
 	ul {
 		list-style:none;
 		li {
+			font-size:1.4em;
 			margin: 10px 0;
 			padding:2px;
 			background: #fff;
@@ -518,7 +524,7 @@ div#slide_container {
 }
 
 /* FOOTER */
-footer {
+#footer {
 	width:100%;
 	padding:0;
 	margin-top:25px;

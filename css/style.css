@@ -18,7 +18,6 @@ body {
   margin: 0;
   padding: 0;
   background: #e0e0e0 url(../img/bg.jpg) 0 0 repeat-x;
-  font-size: 0.8em;
 }
 h1,
 h2,
@@ -205,15 +204,14 @@ ul.messages li.warning {
   background: linear-gradient(top, #bbbb00, #555500);
 }
 /* HEADER */
-header {
+#header {
   padding: 25px 0;
   clear: both;
 }
-header h1 {
+#header h1 {
   display: inline-block;
   color: #008ec4;
   font-size: 4.5em;
-  line-height: 130px;
   text-indent: -1000px;
   letter-spacing: -0.2em;
   text-transform: uppercase;
@@ -222,42 +220,43 @@ header h1 {
   width: 260px;
   height: 100px;
   margin: 0;
-  background-image: url(../img/logo.gif);
+  background: url(../img/logo.gif) 0 0 no-repeat;
 }
-header h1 em {
+#header h1 em {
   color: #8dc63f;
   margin-left: .2em;
   letter-spacing: 0em;
 }
-header h2 {
+#header h2 {
   display: inline-block;
   width: 100%;
   font-family: Comfortaa, Arial;
   font-weight: normal;
   color: #8dc63f;
   margin: 0;
-  letter-spacing: .4em;
+  letter-spacing: .35em;
 }
-header nav {
+#header #nav {
   position: relative;
   margin-top: 50px;
   margin-bottom: 15px;
   text-align: right;
 }
-header nav a {
+#header #nav a {
   font-size: 1.2em;
   float: left;
-  padding: .1em .7em;
+  padding: 4px 8px;
 }
-header nav a.active {
+#header #nav a.active {
   border-bottom: 1px dotted #008ec4;
 }
-header nav form {
+#header #nav form {
   float: left;
-  margin: 0 25px;
+  margin: 0 15px;
 }
-header nav form input {
+#header #nav form input {
   font-size: 1.1em;
+  line-height: 2;
   float: left;
   width: 150px;
   margin: 0;
@@ -271,9 +270,10 @@ header nav form input {
   background: #ffffff url(../img/input-bg.jpg) 0 0 repeat-x;
   padding: 0 5px;
 }
-header nav form button {
+#header #nav form button {
   float: left;
   height: 30px;
+  width: 40px;
   display: inline-block;
   font-size: 1em;
   font-weight: bold;
@@ -281,18 +281,14 @@ header nav form button {
   margin: 0;
   padding: 0 5px;
   color: #fff;
-  background: #444444;
-  background: -webkit-gradient(linear, left top, left bottom, from(#777777), to(#111111));
-  background: -moz-linear-gradient(top, #777777, #111111);
-  background: -o-linear-gradient(top, #777777, #111111);
-  background: linear-gradient(top, #777777, #111111);
+  background: #333333 url(../img/search.jpg) 50% 50% no-repeat;
   -moz-border-radius: 0 3px 3px 0;
   -webkit-border-radius: 0 3px 3px 0;
   -o-border-radius: 0 3px 3px 0;
   border-radius: 0 3px 3px 0;
   border: 1px solid #999;
 }
-header nav .navbox {
+#header #nav .navbox {
   -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -305,37 +301,37 @@ header nav .navbox {
   padding: 0;
   overflow: hidden;
 }
-header nav .navbox a {
+#header #nav .navbox a {
   letter-spacing: .05em;
   display: inline-block;
   vertical-align: middle;
   color: #fff;
 }
-header nav .navbox a.login {
-  -moz-border-radius: 0.1em 0 0 0.1em;
-  -webkit-border-radius: 0.1em 0 0 0.1em;
-  -o-border-radius: 0.1em 0 0 0.1em;
-  border-radius: 0.1em 0 0 0.1em;
-  background: #8dc63f;
+#header #nav .navbox a.login {
+  background: #8dc63f url(../img/bg-green-gradient.jpg) 0 50% repeat-x;
   background: -webkit-gradient(linear, left top, left bottom, from(#8dc63f), to(#709043));
   background: -moz-linear-gradient(top, #8dc63f, #709043);
   background: -o-linear-gradient(top, #8dc63f, #709043);
   background: linear-gradient(top, #8dc63f, #709043);
+  -moz-border-radius: 0.1em 0 0 0.1em;
+  -webkit-border-radius: 0.1em 0 0 0.1em;
+  -o-border-radius: 0.1em 0 0 0.1em;
+  border-radius: 0.1em 0 0 0.1em;
   border-right: 1px solid #709043;
 }
-header nav .navbox a.signup {
-  -moz-border-radius: 0 0.1em 0.1em 0;
-  -webkit-border-radius: 0 0.1em 0.1em 0;
-  -o-border-radius: 0 0.1em 0.1em 0;
-  border-radius: 0 0.1em 0.1em 0;
-  background: #008ec4;
+#header #nav .navbox a.signup {
+  background: #008ec4 url(../img/bg-blue-gradient.jpg) 0 50% repeat-x;
   background: -webkit-gradient(linear, left top, left bottom, from(#008ec4), to(#1d5771));
   background: -moz-linear-gradient(top, #008ec4, #1d5771);
   background: -o-linear-gradient(top, #008ec4, #1d5771);
   background: linear-gradient(top, #008ec4, #1d5771);
+  -moz-border-radius: 0 0.1em 0.1em 0;
+  -webkit-border-radius: 0 0.1em 0.1em 0;
+  -o-border-radius: 0 0.1em 0.1em 0;
+  border-radius: 0 0.1em 0.1em 0;
   border-left: 1px solid #008ec4;
 }
-header nav .connect {
+#header #nav .connect {
   font-family: "Gloria Hallelujah", "Comic Sans MS", "Brush Script MT", cursive;
   font-size: 1.3em;
   color: #aaa;
@@ -347,21 +343,21 @@ header nav .connect {
   background: url(../img/conect-arrow.gif) 100% 10px no-repeat;
 }
 /* ASIDES */
-aside {
+.aside {
   text-align: left;
 }
-aside nav {
+.aside .nav {
   font-size: 1.1em;
   margin-bottom: 15px;
 }
-aside nav a {
+.aside .nav a {
   display: block;
   padding: .1em .7em;
 }
-aside nav a.active {
+.aside .nav a.active {
   border-bottom: 1px dotted #008ec4;
 }
-aside.fixed {
+.aside.fixed {
   position: fixed;
   top: 0;
 }
@@ -370,7 +366,7 @@ aside.fixed {
   text-align: center;
   margin: 50px 100px;
   border: 3px solid #fff;
-  background: #333333;
+  background: #666;
   background: -webkit-gradient(linear, left top, left bottom, from(#666666), to(#111111));
   background: -moz-linear-gradient(top, #666666, #111111);
   background: -o-linear-gradient(top, #666666, #111111);
@@ -461,6 +457,7 @@ form.login input, form.sign-up input {
   list-style: none;
 }
 .users ul li {
+  font-size: 1.4em;
   margin: 10px 0;
   padding: 2px;
   background: #fff;
@@ -515,7 +512,7 @@ div#slide_container .slider {
   margin: 10px;
 }
 /* FOOTER */
-footer {
+#footer {
   width: 100%;
   padding: 0;
   margin-top: 25px;
@@ -523,13 +520,13 @@ footer {
   background: #2a2a2a;
   border-top: 1px solid #fff;
 }
-footer .inner {
+#footer .inner {
   margin-top: 10px;
 }
-footer ul {
+#footer ul {
   list-style: none;
 }
-footer h5 {
+#footer h5 {
   color: #fff;
   margin: 0;
 }
