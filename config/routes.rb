@@ -1,4 +1,6 @@
 UploadIt::Application.routes.draw do
+  resources :photos
+
   get "home/index"
 
   # The priority is based upon order of creation:
